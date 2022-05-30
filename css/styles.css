@@ -186,7 +186,7 @@ li {
 
 /*#region Секція Герой*/
 
-.hero {
+.section-hero {
     text-align: center;
     padding: 200px 0;
 
@@ -201,7 +201,7 @@ li {
     height: 600px;
 }
 
-.title-hero {
+.section-hero__title {
     width: 696px;
     margin-bottom: 30px;
     margin-left: auto;
@@ -213,11 +213,16 @@ li {
     letter-spacing: 0.06em;
 }
 
-.btn-hero {
-    min-width: 200px;
-    padding: 10px 32px;
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 200px;
+    height: 50px;
+    padding: 0;
     border-radius: 4px;
-    border: 1px solid #000000;
+    border: 1px solid transparent;
 
     color: var(--bcg-color);
     background-color: var(--accent-color);
@@ -233,13 +238,13 @@ li {
     border var(--trans-hover);
 }
 
-.btn-hero:hover,
-.btn-hero:focus {
+.button:hover,
+.button:focus {
     transform: scale(1.10);
     border: transparent;
 }
 
-.backdrop {
+.hero-backdrop {
     position: fixed;
     top: 0;
     left: 0;
@@ -255,13 +260,13 @@ li {
     visibility  var(--trans-hover);
 }
 
-.backdrop.is-hidden {
+.is-hidden {
     visibility: hidden;
     opacity: 0;
     pointer-events: none;
 }
 
-.modal {
+.hero-backdrop__modal {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -278,11 +283,11 @@ li {
     transition: transform var(--trans-hover);
 }
 
-.backdrop.is-hidden .modal {
+.hero-backdrop.is-hidden .hero-backdrop__modal {
     transform: translate(-50%, -50%) scale(1.2) rotate(360deg);
 }
 
-.modal-btn {
+.hero-backdrop__button {
     position: absolute;
     top: 8px;
     right: 8px;
@@ -300,13 +305,13 @@ li {
     border-radius: 50%;
 }
 
-.modal-btn .modal-icon{
+.hero-backdrop__icon{
     fill: #000000;
     transition: fill var(--trans-hover);
 }
 
-.modal-btn:hover .modal-icon,
-.modal-btn:focus .modal-icon {
+.hero-backdrop__button:hover .hero-backdrop__icon,
+.hero-backdrop__button:focus .hero-backdrop__icon {
     fill: var(--accent-color);
 }
 
@@ -322,7 +327,7 @@ li {
     padding: 40px;
 }
 
-.form-title {
+.modal-form__title {
     width: 448px;
     font-size: 20px;
     line-height: 1.15;
@@ -331,7 +336,7 @@ li {
     margin-bottom: 12px;
 }
 
-.lbl-form {
+.modal-form__label {
     position: relative;
     display: block;
     margin-bottom: 10px;
@@ -346,7 +351,11 @@ li {
     letter-spacing: 0.01em;
 }
 
-.icon-form {
+.modal-form__label--down {
+    margin-bottom: 0;
+}
+
+.modal-form__icon {
     position: absolute;
     bottom: 11px;
     left: 12px;
@@ -355,17 +364,17 @@ li {
     transition: fill var(--trans-hover);
 }
 
-.lbl-form:focus-within .icon-form {
+.modal-form__label:focus-within .modal-form__icon {
     fill: var(--accent-color);
 }
 
-.user-info:focus-within,
-.user-coment:focus-within {
+.modal-form__input:focus-within,
+.modal-form__input:focus-within {
     outline: transparent;
     border-color: #2196F3;
 }
 
-.user-info {
+.modal-form__input {
     display: block;
     padding-left: 42px;
     padding-top: 12px;
@@ -384,28 +393,16 @@ li {
     transition: border-color var(--trans-hover);
 }
 
-.label-coments {
-    margin-bottom: 0;
-}
-
-.user-coment {
-    display: block;
+.modal-form__input--comment {
     padding: 12px 16px;
     margin-top: 4px;
     margin-bottom: 20px;
     height: 120px;
     width: 448px;
 
-    font-size: 14px;
-    line-height: 1.14;
     letter-spacing: 0.01em;
     color: rgba(117, 117, 117, 0.5);
-
     resize: none;
-    border: 1px solid rgba(33, 33, 33, 0.2);
-    border-radius: 4px;
- 
-    transition: border-color var(--trans-hover);
 }
 
 .lbl-policy {
@@ -853,7 +850,7 @@ li {
     margin-left: auto;
 }
 
-.subscription-title {
+.subscription-form__title {
     display: block;
     margin-bottom: 20px;
     width: 219px;
@@ -865,20 +862,20 @@ li {
     text-transform: uppercase;
 }
 
-.ftr-form {
+.subscription-form__container {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.subscription-label {
+.subscription-form__label {
     position: relative;
 
     display: block;
     margin-right: 12px;
 }
 
-.sub-label {
+.subscription-form__text {
     position: absolute;
     top: 50%;
     left: 16px;
@@ -891,15 +888,15 @@ li {
     transition: transform var(--trans-hover);
 }
 
-.subscription-label:focus-within > .sub-label {
+.subscription-form__label:focus-within .subscription-form__text--up {
     transform: translateY(-45px);
 }
 
-.subscription-field:not(:placeholder-shown) + .sub-label{
+.subscription-form__input:not(:placeholder-shown) + .subscription-form__text--up {
     transform: translateY(-45px);
 }
 
-.subscription-field {
+.subscription-form__input {
     display: inline-block;
     width: 358px;
     height: 50px;
@@ -913,46 +910,15 @@ li {
     border-radius: 4px;
 }
 
-.btn-subscription {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    width: 200px;
-    height: 50px;
-    padding: 0;
-    cursor: pointer;
-
-    color: var(--bcg-color);
-    background-color: var(--accent-color);
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 1.88;
-    letter-spacing: 0.06em;
-    text-align: center;
-    
-    border: 1px;
-    border-color: transparent;
-    border-radius: 4px;
-
-    transform: scale(1);
-    transition: transform var(--trans-hover),
-    box-shadow var(--trans-hover);
-}
-
-.subscription-text {
-    margin-right: 10px;
-}
-
-.sub-icon {
+.button__icon {
     fill: var(--bcg-color);
 }
 
-.btn-subscription:hover,
-.btn-subscription:focus {
-    transform: scale(1.10);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+.button__icon--end {
+    margin-left: 10px;
 }
+
+
 /*#endregion*/
 
 /*#endregion*/
