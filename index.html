@@ -19,27 +19,35 @@
 
 <body>
     <!--Шапка сторінки-->
-    <header class="header-page">
-        <div class="container container-menu">
+    <header class="page-header">
+        <div class="container page-header__container">
             <nav class="navigation">
-                <a class="logo logo-navigation" href="./index.html">Web<span class="logo-nav-word">Studio</span></a>
+                <a class="logo page-header__logo" href="./index.html">
+                    Web<span class="page-header__logo page-header__logo--black">Studio</span></a>
 
-                <ul class="list menu-nav">
-                    <li class="item item-nav"><a class="link-navigation current" href="./">Студия</a></li>
-                    <li class="item item-nav"><a class="link-navigation" href="./portfolio.html">Портфолио</a></li>
-                    <li class="item item-nav"><a class="link-navigation" href="">Контакты</a></li>
+                <ul class="navigation__list">
+                    <li class="navigation__item">
+                        <a class="navigation__link navigation__link--current" href="./">Студия</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="./portfolio.html">Портфолио</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="">Контакты</a>
+                    </li>
                 </ul>
             </nav>
-            <ul class="menu-contact">
-                <li class="item item-contact">
-                    <a class="link-hedcontacts" href="mailto:info@devstudio.com">
+
+            <ul class="contacts page-header__contacts">
+                <li class="contacts__item">
+                    <a class="contacts__link" href="mailto:info@devstudio.com">
                         <svg class="contacts-icon" width="16" height="12">
                             <use href="./images/icons/sprite.svg#icon-email"></use>
                         </svg>
                         info@devstudio.com</a>
                 </li>
-                <li class="item item-contact">
-                    <a class="link-hedcontacts" href="tel:+380961111111">
+                <li class="contacts__item">
+                    <a class="contacts__link" href="tel:+380961111111">
                         <svg class="contacts-icon" width="10" height="16">
                             <use href="./images/icons/sprite.svg#icon-phone"></use>
                         </svg>
@@ -99,8 +107,10 @@
                                 <label class="lbl-policy">
                                     <input type="checkbox" class="polisy visually-hidden" name="check-policy">
                                     <span class="checkbox"></span>
-                                    <span class="text-policy">Соглашаюсь с рассылкой и принимаю</span>
-                                    <a href="" class="link-policy">Условия договора</a>
+                                    <span class="text-policy">Соглашаюсь с рассылкой и принимаю 
+                                        <a href="" class="link-policy">Условия договора</a>
+                                    </span>
+                                    
                                 </label>
 
                             <button type="submit" class="btn-form">Отправить</button>
@@ -460,21 +470,25 @@
     </main>
 
     <!--Футер-->
-    <footer class="footer-page">
-        <div class="container ftr-page">
+    <footer class="page-footer">
+        <div class="container page-footer__container">
 
             <div class="footer-address">
-                <a class="logo ftr-logo" href="">Web<span class="logo-word">Studio</span></a>
-                <address class="location">г. Киев, пр-т Леси Украинки, 26</address>
-                <ul class="list ftr-list">
-                    <li class="item ftr-item">
-                        <a class="link-contacts" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                <a class="logo ftr-logo page-footer__logo" href="">
+                    Web<span class="page-footer__logo page-footer__logo--white">Studio</span></a>
+                <address class="footer-address__location">г. Киев, пр-т Леси Украинки, 26</address>
+                <ul class="footer-address__list">
+                    <li class="footer-address__item">
+                        <a class="footer-address__link" href="mailto:info@devstudio.com">info@devstudio.com</a>
                     </li>
-                    <li class="item  ftr-item">
-                        <a class="link-contacts" href="tel:+380961111111">+38 096 111 11 11</a>
+                    <li class="footer-address__item">
+                        <a class="footer-address__link" href="tel:+380961111111">+38 096 111 11 11</a>
                     </li>
                 </ul>
             </div>
+
+
+            
 
             <div class="ftr-social-links">
                 <h2 class="ftr-title">ПРИСОЕДИНЯЙТЕСЬ</h2>

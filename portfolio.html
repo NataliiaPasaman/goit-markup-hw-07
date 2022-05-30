@@ -16,29 +16,38 @@
 </head>
 
 <body>
-    <!--Шапка сторінки-->
-    <header class="header-page">
-        <div class="container container-menu">
-            <nav class="navigation">
-                <a class="logo logo-navigation" href="./index.html">Web<span class="logo-nav-word">Studio</span></a>
 
-                <ul class="list menu-nav">
-                    <li class="item item-nav"><a class="link-navigation" href="./">Студия</a></li>
-                    <li class="item item-nav"><a class="link-navigation current" href="./portfolio.html">Портфолио</a>
+    </header>
+    <!--Шапка сторінки-->
+    <header class="page-header">
+        <div class="container page-header__container">
+            <nav class="navigation">
+                <a class="logo page-header__logo" href="./index.html">
+                    Web<span class="page-header__logo page-header__logo--black">Studio</span></a>
+
+                <ul class="navigation__list">
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="./">Студия</a>
                     </li>
-                    <li class="item item-nav"><a class="link-navigation" href="">Контакты</a></li>
+                    <li class="navigation__item">
+                        <a class="navigation__link navigation__link--current" href="./portfolio.html">Портфолио</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="">Контакты</a>
+                    </li>
                 </ul>
             </nav>
-            <ul class="menu-contact">
-                <li class="item item-contact">
-                    <a class="link-hedcontacts" href="mailto:info@devstudio.com">
+
+            <ul class="contacts page-header__contacts">
+                <li class="contacts__item">
+                    <a class="contacts__link" href="mailto:info@devstudio.com">
                         <svg class="contacts-icon" width="16" height="12">
                             <use href="./images/icons/sprite.svg#icon-email"></use>
                         </svg>
                         info@devstudio.com</a>
                 </li>
-                <li class="item item-contact">
-                    <a class="link-hedcontacts" href="tel:+380961111111">
+                <li class="contacts__item">
+                    <a class="contacts__link" href="tel:+380961111111">
                         <svg class="contacts-icon" width="10" height="16">
                             <use href="./images/icons/sprite.svg#icon-phone"></use>
                         </svg>
@@ -120,7 +129,7 @@
 
                     <li class="item item-portfolio">
                         <a class="link portfolio-link" href="">
-                            
+
                             <div class="thumb-card">
                                 <div class="thumb-overlay">
                                     <p class="card-desc">Ресурс предлагает комплексные предложения с разным уровнем
@@ -131,7 +140,7 @@
                                 <img src="./images/portfolio-img/seafood.jpg" alt="Приложение для ресторана Seafood"
                                     width="370" height="294">
                             </div>
-                            
+
                             <div class="card-description">
                                 <h2 class="title-project">Ресторан <span lang="en">Seafood</span></h2>
                                 <p class="work-card">Приложение</p>
@@ -141,7 +150,7 @@
 
                     <li class="item item-portfolio">
                         <a class="link portfolio-link" href="">
-                            
+
                             <div class="thumb-card">
                                 <div class="thumb-overlay">
                                     <p class="card-desc">Ресурс предлагает комплексные предложения с разным уровнем
@@ -152,7 +161,7 @@
                                 <img src="./images/portfolio-img/project-prime.jpg" alt="Маркетинговый проект Prime"
                                     width="370" height="294">
                             </div>
-                            
+
                             <div class="card-description">
                                 <h2 class="title-project">Проект <span lang="en">Prime</span></h2>
                                 <p class="work-card">Маркетинг</p>
@@ -162,7 +171,7 @@
 
                     <li class="item item-portfolio">
                         <a class="link portfolio-link" href="">
-                            
+
                             <div class="thumb-card">
                                 <div class="thumb-overlay">
                                     <p class="card-desc">Ресурс предлагает комплексные предложения с разным уровнем
@@ -173,7 +182,7 @@
                                 <img src="./images/portfolio-img/boxes.jpg" alt="Приложение компании Boxes" width="370"
                                     height="294">
                             </div>
-                            
+
                             <div class="card-description">
                                 <h2 class="title-project">Проект <span lang="en">Boxes</span></h2>
                                 <p class="work-card">Приложение</p>
@@ -183,7 +192,7 @@
 
                     <li class="item item-portfolio">
                         <a class="link portfolio-link" href="">
-                            
+
                             <div class="thumb-card">
                                 <div class="thumb-overlay">
                                     <p class="card-desc">Ресурс предлагает комплексные предложения с разным уровнем
@@ -194,7 +203,7 @@
                                 <img src="./images/portfolio-img/web-inspiration.jpg"
                                     alt="Веб-сайт компании Inspiration has no Borders" width="370" height="294">
                             </div>
-                            
+
                             <div class="card-description">
                                 <h2 class="title-project" lang="en">Inspiration has no Borders</h2>
                                 <p class="work-card">Веб-сайт</p>
@@ -204,7 +213,7 @@
 
                     <li class="item item-portfolio">
                         <a class="link portfolio-link" href="">
-                            
+
                             <div class="thumb-card">
                                 <div class="thumb-overlay">
                                     <p class="card-desc">Ресурс предлагает комплексные предложения с разным уровнем
@@ -215,7 +224,7 @@
                                 <img src="./images/portfolio-img/edition.jpg"
                                     alt="Дизайн для издания Издание Limited Edition" width="370" height="294">
                             </div>
-                            
+
                             <div class="card-description">
                                 <h2 class="title-project">Издание <span lang="en">Limited Edition</span></h2>
                                 <p class="work-card">Дизайн</p>
@@ -225,7 +234,7 @@
 
                     <li class="item item-portfolio">
                         <a class="link portfolio-link" href="">
-                            
+
                             <div class="thumb-card">
                                 <div class="thumb-overlay">
                                     <p class="card-desc">Ресурс предлагает комплексные предложения с разным уровнем
@@ -236,7 +245,7 @@
                                 <img src="./images/portfolio-img/lab.jpg" alt="Маркетинговый проект LAB" width="370"
                                     height="294">
                             </div>
-                            
+
                             <div class="card-description">
                                 <h2 class="title-project">Проект <span lang="en">LAB</span></h2>
                                 <p class="work-card">Маркетинг</p>
@@ -246,7 +255,7 @@
 
                     <li class="item item-portfolio">
                         <a class="link portfolio-link" href="">
-                            
+
                             <div class="thumb-card">
                                 <div class="thumb-overlay">
                                     <p class="card-desc">Ресурс предлагает комплексные предложения с разным уровнем
@@ -257,7 +266,7 @@
                                 <img src="./images/portfolio-img/growing-business.jpg" alt="Приложение Growing Business"
                                     width="370" height="294">
                             </div>
-                            
+
                             <div class="card-description">
                                 <h2 class="title-project" lang="en">Growing Business</h2>
                                 <p class="work-card">Приложение</p>
@@ -330,7 +339,7 @@
             </div>
 
             <!-- Форма підписки -->
-            
+
             <div class="footer-form">
                 <form class="subscription-form" autocomplete="off">
                     <strong class="subscription-title">Подпишитесь на рассылку</strong>
