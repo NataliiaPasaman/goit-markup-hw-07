@@ -1,0 +1,23 @@
+
+
+.page-header__logo--black {
+    @extend %logo;
+    color: #000000;
+}
+
+.page-header__logo {
+    @extend %logo;
+    animation: logoA 1500ms ease-in-out infinite normal;
+}
+
+.page-footer__logo {
+    @extend %logo;
+
+    padding: 0;
+    margin-right: 0;
+    margin-bottom: 20px;
+    
+    &--white {
+        color: $bcg-color;
+    }
+}
